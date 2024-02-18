@@ -65,8 +65,6 @@ export const authOptions: AuthOptions = {
 
                 Connection();
 
-                console.log(credentials);
-
                 const existingUser = await User.findOne({
                     email: credentials.email,
                 });
@@ -95,9 +93,9 @@ export const authOptions: AuthOptions = {
         async session({ session }) {
             Connection();
 
-            const user = (await User.findOne({
+            const user = await User.findOne({
                 email: session.user?.email,
-            })) as UserLean;
+            });
 
             // the data was being changed but was given of the last session
             const newSession = {
@@ -107,7 +105,7 @@ export const authOptions: AuthOptions = {
                 id: user._id,
             };
 
-            // console.log(newSession);
+            console.log(newSession);
 
             return newSession;
         },

@@ -2,8 +2,9 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { userLinks } from "@/constants";
+import { AiOutlineUser } from "react-icons/ai";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import user from "../../public/user.jpeg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -49,7 +50,7 @@ export default function ListBoxModal({
         >
             <Menu.Button
                 as="div"
-                className="flex gap-2 items-center cursor-pointer rounded-md bg-black hover:text-white text-slate-200 px-4 py-2 rounded- md  "
+                className="flex gap-2 items-center cursor-pointer bg-black hover:text-white text-slate-200 px-4 py-2 rounded- md  "
             >
                 <div className=" relative  h-[30px] w-[30px] rounded-full bg-green-400 ">
                     {" "}

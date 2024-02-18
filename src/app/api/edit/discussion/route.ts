@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
 import Connection from "@/lib/connectDB";
 import Discussion from "@/lib/discussion";
 

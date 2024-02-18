@@ -1,16 +1,10 @@
 "use client";
 
 import React, { FormEvent, useState } from "react";
-import user from "../../public/user.jpeg";
-import { CldUploadButton } from "next-cloudinary";
-import { HiPhoto } from "react-icons/hi2";
-import { IoDocument } from "react-icons/io5";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { revalidatePath } from "next/cache";
-import { revalidateTag } from "@/actions/revalidateTag";
 import Select from "react-select";
 import { tags } from "@/constants/index";
 

@@ -1,10 +1,7 @@
 // "use client";
 import AnnoucementButton from "./ProjectButton";
-import axios from "axios";
-import AnnoucementCard from "./ProjectCard";
 
 import { Project } from "@/types";
-import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 const Projects = ({ projects }: { projects: Project[] }) => {

@@ -1,6 +1,5 @@
 import { getProjects } from "@/actions/getProjects";
 import Projects from "@/components/Projects/Projects";
-import Annoucements from "@/components/Projects/Projects";
 
 export default async function Home() {
     try {

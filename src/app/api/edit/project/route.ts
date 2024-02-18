@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
 import Project from "@/lib/project";
 import Connection from "@/lib/connectDB";
 

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { PiStudent } from "react-icons/pi";
 
 const CardText = ["About us", "Contact us", "Our mission"];

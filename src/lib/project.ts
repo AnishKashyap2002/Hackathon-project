@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-const milestoneSchema = new mongoose.Schema({});
-
 const projectSchema = new mongoose.Schema(
     {
         name: {

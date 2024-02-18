@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import Connection from "@/lib/connectDB";
 import { getServerSession } from "next-auth";
-import Project from "@/lib/project";
 import User from "@/lib/user";
 import { Message as MessageType, User as UserType } from "@/types";
 import Discussion from "@/lib/discussion";

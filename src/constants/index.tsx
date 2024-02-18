@@ -1,7 +1,5 @@
-import { AiFillHome, AiOutlineLogout } from "react-icons/ai";
-import { BsCardChecklist } from "react-icons/bs";
-import { SiGoogleclassroom } from "react-icons/si";
-import { FaNoteSticky } from "react-icons/fa6";
+import { AiOutlineLogout } from "react-icons/ai";
+
 import { FaUserCircle } from "react-icons/fa";
 import { RiEditCircleFill } from "react-icons/ri";
 import { MdGroupWork } from "react-icons/md";

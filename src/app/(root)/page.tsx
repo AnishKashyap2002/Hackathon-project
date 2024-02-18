@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { PiStudent } from "react-icons/pi";
+import logo from "@/../public/logo.jpeg";
 
 const CardText = ["About us", "Contact us", "Our mission"];
 const aboutText = [
@@ -31,6 +33,15 @@ export default function Home() {
                 <main className="h-screen relative  flex justify-center items-center bg-[url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWR1Y2F0aW9uJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D')]">
                     <div className="flex flex-col gap-24 my-10 z-10">
                         <div className="flex flex-col  items-center">
+                            <div className="rounded-full p-5 relative ">
+                                <Image
+                                    src={logo}
+                                    alt="image"
+                                    width={150}
+                                    height={150}
+                                    className="object-fit rounded-full"
+                                />
+                            </div>
                             <div className="text-[40px]  font-bold text-white ">
                                 <div className="flex justify-center text-center">
                                     Improve your{" "}

@@ -1,8 +1,13 @@
 import { NextResponse } from "next/server";
 import Connection from "@/lib/connectDB";
 import { getServerSession } from "next-auth";
+import Project from "@/lib/project";
 import User from "@/lib/user";
-import { Message as MessageType, User as UserType } from "@/types";
+import {
+    Message as MessageType,
+    User as UserType,
+    Discussion as DiscussionType,
+} from "@/types";
 import Discussion from "@/lib/discussion";
 import Message from "@/lib/message";
 
@@ -26,14 +31,18 @@ export async function POST(request: Request) {
         image,
     });
 
-    const updatedDiscussion = await Discussion.findOneAndUpdate(
+    const updatedDiscussion = (await Discussion.findOneAndUpdate(
         { _id: discussion },
         {
             $push: {
                 messages: message._id,
             },
         }
-    );
+    )) as DiscussionType;
+
+    // pusherClient.subscribe(pusherKey);
+    //     pusherClient.bind("conversation:new", newHandler);
+
     console.log(updatedDiscussion);
 
     return NextResponse.json(message);

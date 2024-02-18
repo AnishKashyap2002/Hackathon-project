@@ -1,4 +1,4 @@
-import { NextResponse, NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import Connection from "@/lib/connectDB";
 import bcrypt from "bcrypt";
 
@@ -45,8 +45,4 @@ export async function POST(request: Request) {
 
         return new NextResponse("Internal Error", { status: 400 });
     }
-}
-
-export async function GET(request: NextResponse) {
-    return new NextResponse("good to go", { status: 201 });
 }
